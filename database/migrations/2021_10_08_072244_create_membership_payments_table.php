@@ -15,8 +15,8 @@ class CreateMembershipPaymentsTable extends Migration
     {
         Schema::create('membership_payments', function (Blueprint $table) {
             $table->id();
-            $tabel->date('payment_date');
-            $tabel->string('evidance_of_transfer');
+            $table->date('payment_date');
+            $table->string('evidance_of_transfer');
             $table->timestamps();
         });
     }

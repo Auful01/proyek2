@@ -19,7 +19,6 @@ class CreateOrdersTable extends Migration
             $table->string('junk_name');
             $table->float('weight');
             $table->float('price');
-            $table->bigInteger('category_junk_id');
             $table->timestamps();
         });
     }

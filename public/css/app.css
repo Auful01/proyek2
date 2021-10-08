@@ -69,6 +69,10 @@ body {
   outline: 0 !important;
 }
 
+li a .nav-link:hover{
+    color : #27AE60;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
