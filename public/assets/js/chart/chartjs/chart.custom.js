@@ -27,7 +27,7 @@ Chart.defaults.global = {
     tooltipFontStyle: "normal",
     tooltipFontColor: "#fff",
     tooltipTitleFontSize: 16,
-    TitleFontStyle : "Raleway",
+    TitleFontStyle: "Raleway",
     tooltipTitleFontStyle: "bold",
     tooltipTitleFontColor: "#ffffff",
     tooltipYPadding: 10,
@@ -35,15 +35,15 @@ Chart.defaults.global = {
     tooltipCaretSize: 8,
     tooltipCornerRadius: 6,
     tooltipXOffset: 5,
-    onAnimationProgress: function() {},
-    onAnimationComplete: function() {}
+    onAnimationProgress: function () { },
+    onAnimationComplete: function () { }
 };
 var barData = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [{
         label: "My First dataset",
         fillColor: "rgba(126,  55, 216, 0.6)",
-        strokeColor: "#7e37d8",
+        strokeColor: "#27AE60",
         highlightFill: "rgba(6, 181, 221, 1)",
         highlightStroke: "#06b5dd",
         data: [35, 59, 80, 81, 56, 55, 40]
@@ -73,7 +73,7 @@ var myBarChart = new Chart(barCtx).Bar(barData, barOptions);
 var polarData = [
     {
         value: 300,
-        color: "#7e37d8",
+        color: "#27AE60",
         highlight: "rgba(126,  55, 216, 1)",
         label: "Yellow"
     }, {
@@ -130,8 +130,8 @@ var lineGraphData = {
     }, {
         label: "My Second dataset",
         fillColor: "rgba(126,  55, 216, 0.3)",
-        strokeColor: "#7e37d8",
-        pointColor: "#7e37d8",
+        strokeColor: "#27AE60",
+        pointColor: "#27AE60",
         pointStrokeColor: "#fff",
         pointHighlightFill: "#000",
         pointHighlightStroke: "rgba(30, 166, 236, 1)",
@@ -225,8 +225,8 @@ var pieOptions = {
 var doughnutData = [
     {
         value: 300,
-        color: "#7e37d8",
-        highlight: "#7e37d8",
+        color: "#27AE60",
+        highlight: "#27AE60",
         label: "Primary"
     },
     {
@@ -256,16 +256,16 @@ var doughnutOptions = {
 var doughnutCtx = document.getElementById("myDoughnutGraph").getContext("2d");
 var myDoughnutChart = new Chart(doughnutCtx).Doughnut(doughnutData, doughnutOptions);
 var myLineChart = {
-    labels: ["","10", "20", "30", "40", "50", "60", "70", "80"],
+    labels: ["", "10", "20", "30", "40", "50", "60", "70", "80"],
     datasets: [{
         fillColor: "rgba(21, 141, 247, 0.2)",
         strokeColor: "#158df7",
         pointColor: "#158df7",
         data: [10, 20, 40, 30, 0, 20, 10, 30, 10]
-    },{
+    }, {
         fillColor: "rgba(126,  55, 216, 0.2)",
-        strokeColor: "#7e37d8",
-        pointColor: "#7e37d8",
+        strokeColor: "#27AE60",
+        pointColor: "#27AE60",
         data: [20, 40, 10, 20, 40, 30, 40, 10, 20]
     }, {
         fillColor: "rgba(253, 81, 125, 0.2)",

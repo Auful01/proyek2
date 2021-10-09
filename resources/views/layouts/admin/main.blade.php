@@ -7,15 +7,16 @@
     <meta name="description" content="Poco admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Poco admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
+    <link rel="icon" href="{{asset('images/logo5.png')}}">
     @include('layouts.admin.header')
   </head>
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
     <!-- Loader starts-->
-    <div class="loader-wrapper">
-      <div class="typewriter">
-        <h1>New Era Admin Loading..</h1>
-      </div>
-    </div>
+    <div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper document">
@@ -27,8 +28,8 @@
       <!-- Page Body Start-->
       <div class="page-body-wrapper document-content" >
         <!-- Page Sidebar Start-->
+        
         <div class="page-sidebar custom-scrollbar" id="myScrollspy">
-          <div class="logo-wrapper"><a href="index.html"><img src="{{asset('images/logo4.png')}}" width="190px" alt=""></a></div>
           @include('layouts.admin.navbar')
         </div>
         <!-- Page Sidebar Ends-->

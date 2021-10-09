@@ -84,7 +84,7 @@ tr.introjs-showElement > {
   color: white;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #7e37d8 0%, #7e37d8 100%);
+  background: linear-gradient(to bottom, #27AE60 0%, #27AE60 100%);
   width: 20px;
   height: 20px;
   line-height: 20px;
@@ -101,7 +101,7 @@ tr.introjs-showElement > {
     top: -30px;
     border-top-color: transparent;
     border-right-color: transparent;
-    border-bottom-color: #7e37d8;
+    border-bottom-color: #27AE60;
     border-left-color: transparent;
   }
   &.top-right {
@@ -109,7 +109,7 @@ tr.introjs-showElement > {
     right: 10px;
     border-top-color: transparent;
     border-right-color: transparent;
-    border-bottom-color: #7e37d8;
+    border-bottom-color: #27AE60;
     border-left-color: transparent;
   }
   &.top-middle {
@@ -118,7 +118,7 @@ tr.introjs-showElement > {
     margin-left: -5px;
     border-top-color: transparent;
     border-right-color: transparent;
-    border-bottom-color: #7e37d8;
+    border-bottom-color: #27AE60;
     border-left-color: transparent;
   }
   &.right {
@@ -127,7 +127,7 @@ tr.introjs-showElement > {
     border-top-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
-    border-left-color: #7e37d8;
+    border-left-color: #27AE60;
   }
   &.right-bottom {
     bottom: 10px;
@@ -135,11 +135,11 @@ tr.introjs-showElement > {
     border-top-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
-    border-left-color: #7e37d8;
+    border-left-color: #27AE60;
   }
   &.bottom {
     bottom: -30px;
-    border-top-color: #7e37d8;
+    border-top-color: #27AE60;
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
@@ -148,7 +148,7 @@ tr.introjs-showElement > {
     left: -30px;
     top: 10px;
     border-top-color: transparent;
-    border-right-color: #7e37d8;
+    border-right-color: #27AE60;
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
@@ -156,7 +156,7 @@ tr.introjs-showElement > {
     left: -30px;
     bottom: 10px;
     border-top-color: transparent;
-    border-right-color: #7e37d8;
+    border-right-color: #27AE60;
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
@@ -167,14 +167,14 @@ tr.introjs-showElement > {
   position: absolute;
   visibility: visible;
   padding: 15px;
-  background-color: #7e37d8;
+  background-color: #27AE60;
   min-width: 250px;
   max-width: 300px;
   border-radius: 3px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
   transition: opacity 0.1s ease-out;
   color: white;
-  border: 6px solid #7e37d8;
+  border: 6px solid #27AE60;
 }
 
 .introjs-tooltipbuttons {
@@ -222,7 +222,7 @@ tr.introjs-showElement > {
 .introjs-skipbutton {
   box-sizing: content-box;
   margin-right: 5px;
-  color: #7e37d8;
+  color: #27AE60;
 }
 
 .introjs-prevbutton {
@@ -242,7 +242,7 @@ tr.introjs-showElement > {
 }
 
 .introjs-disabled {
-  color: #7e37d8;
+  color: #27AE60;
   border-color: #d4d4d4;
   box-shadow: none;
   cursor: default;
@@ -251,7 +251,7 @@ tr.introjs-showElement > {
   background: #d4d4d4;
   opacity:0.5;
   &:hover, &:focus {
-    color: #7e37d8;
+    color: #27AE60;
     border-color: #d4d4d4;
     box-shadow: none;
     cursor: default;
