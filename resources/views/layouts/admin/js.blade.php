@@ -55,6 +55,8 @@
  <script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
  <script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
  <script src="{{asset('assets/js/chat-menu.js')}}"></script>
+ <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+ <script src="{{asset('assets/js/datatable/datatables/datatable.custom.js')}}"></script>
  <!-- Plugins JS Ends-->
  <!-- Theme js-->
  <script src="{{asset('assets/js/script.js')}}"></script>
