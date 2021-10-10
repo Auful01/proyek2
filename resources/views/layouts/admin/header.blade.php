@@ -1,6 +1,6 @@
-<link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
-    <title>Poco - Premium Admin Template</title>
+<link rel="icon" href="{{asset('images/logo5.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('images/logo5.png')}}" type="image/x-icon">
+    <title>KangLoak</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Font Awesome-->
@@ -46,10 +46,7 @@
   <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
-
-  <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-  <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-  <title>Poco - Premium Admin Template</title>
+  
   <!-- Google font-->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Font Awesome-->
