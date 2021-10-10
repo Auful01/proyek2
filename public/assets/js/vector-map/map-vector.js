@@ -5,13 +5,13 @@
     b.prototype.init = function () {
         maps("#world-map").vectorMap({
             map: "world_mill_en",
-            scaleColors: ["#8a41e5", "#27AE60"],
+            scaleColors: ["#8a41e5", "#07a34d"],
             normalizeFunction: "polynomial",
             hoverOpacity: .7,
             hoverColor: !1,
             regionStyle: {
                 initial: {
-                    fill: "#27AE60"
+                    fill: "#07a34d"
                 }
             },
             backgroundColor: "transparent",
@@ -20,7 +20,7 @@
             backgroundColor: "transparent",
             regionStyle: {
                 initial: {
-                    fill: "#27AE60"
+                    fill: "#07a34d"
                 }
             }
         }), maps("#india").vectorMap({
@@ -36,7 +36,7 @@
             backgroundColor: "transparent",
             regionStyle: {
                 initial: {
-                    fill: "#27AE60"
+                    fill: "#07a34d"
                 }
             }
         }), maps("#uk").vectorMap({

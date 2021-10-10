@@ -1482,7 +1482,7 @@ var options = {
     legend: {
         horizontalAlign: 'left'
     },
-    colors: ['#27AE60']
+    colors: ['#07a34d']
 
 }
 
@@ -1522,7 +1522,7 @@ var options1 = {
             format: 'dd/MM/yy HH:mm'
         },
     },
-    colors: ['#27AE60', '#fd517d']
+    colors: ['#07a34d', '#fd517d']
 }
 
 var chart1 = new ApexCharts(
@@ -1552,7 +1552,7 @@ var options2 = {
     xaxis: {
         categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
     },
-    colors: ['#27AE60']
+    colors: ['#07a34d']
 }
 
 var chart2 = new ApexCharts(
@@ -1612,7 +1612,7 @@ var options3 = {
             }
         }
     },
-    colors: ['#27AE60', '#fe80b2', '#80cf00']
+    colors: ['#07a34d', '#fe80b2', '#80cf00']
 }
 
 var chart3 = new ApexCharts(
@@ -1697,7 +1697,7 @@ var options = {
     theme: {
         palette: 'palette2'
     },
-    colors: ['#27AE60', '#fe80b2', '#80cf00', '#06b5dd']
+    colors: ['#07a34d', '#fe80b2', '#80cf00', '#06b5dd']
 }
 
 var chart = new ApexCharts(
@@ -1716,7 +1716,7 @@ var options4 = {
     plotOptions: {
         candlestick: {
             colors: {
-                upward: '#27AE60',
+                upward: '#07a34d',
                 downward: '#fe80b2'
             }
         }
@@ -2019,7 +2019,7 @@ var options5 = {
             sizeOffset: 4
         }
     },
-    colors: ['#27AE60']
+    colors: ['#07a34d']
 
 }
 
@@ -2138,7 +2138,7 @@ var options6 = {
     xaxis: {
         type: 'datetime',
     },
-    colors: ['#27AE60']
+    colors: ['#07a34d']
 }
 
 var chart6 = new ApexCharts(
@@ -2217,7 +2217,7 @@ var options7 = {
             useSeriesColors: true
         },
     },
-    colors: ['#27AE60', '#fd517d', '#158df7']
+    colors: ['#07a34d', '#fd517d', '#158df7']
 }
 
 var chart7 = new ApexCharts(
@@ -2246,7 +2246,7 @@ var options8 = {
             }
         }
     }],
-    colors: ['#27AE60', '#fe80b2', '#80cf00', '#06b5dd', '#fd517d']
+    colors: ['#07a34d', '#fe80b2', '#80cf00', '#06b5dd', '#fd517d']
 }
 
 var chart8 = new ApexCharts(
@@ -2274,7 +2274,7 @@ var options9 = {
             }
         }
     }],
-    colors: ['#27AE60', '#fe80b2', '#80cf00', '#06b5dd', '#fd517d']
+    colors: ['#07a34d', '#fe80b2', '#80cf00', '#06b5dd', '#fd517d']
 }
 
 var chart9 = new ApexCharts(
@@ -2372,7 +2372,7 @@ var options11 = {
     },
     series: [44, 55, 67, 83],
     labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
-    colors: ['#27AE60', '#fe80b2', '#80cf00', '#06b5dd']
+    colors: ['#07a34d', '#fe80b2', '#80cf00', '#06b5dd']
 
 
 }

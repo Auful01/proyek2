@@ -19,7 +19,23 @@
 </div>
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
-    <div class="page-wrapper document">
+    <div class="page-wrapper">
+
+        @include('layouts.admin.pageHeader')
+
+        <div class="page-body-wrapper">
+
+            @include('layouts.admin.iconSidebar')
+
+            @include('layouts.admin.rightSidebar')
+
+            @include('layouts.admin.body')
+            
+            @include('layouts.admin.footer')
+
+        </div>
+    </div>
+    {{-- <div class="page-wrapper document">
       <!-- Page Header Start-->
       <div class="page-main-header document-header" style="background: #fff; filter: drop-shadow(20px 5px 10px #02834d73)">
           @include('layouts.admin.sidebar')
@@ -47,7 +63,7 @@
           </div>
         </footer>
       </div>
-    </div>
+    </div> --}}
     @include('layouts.admin.js')
   </body>
 </html>

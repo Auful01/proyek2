@@ -332,7 +332,7 @@ var options = {
           from: 21,
           to: 45,
           name: 'high',
-          color: '#27AE60'
+          color: '#07a34d'
         },
         {
           from: 46,
@@ -465,7 +465,7 @@ var options = {
   fill: {
     opacity: 1
   },
-  colors: ['#27AE60', '#fe80b2', '#06b5dd'],
+  colors: ['#07a34d', '#fe80b2', '#06b5dd'],
 
 }
 
@@ -477,7 +477,7 @@ var chart = new ApexCharts(
 chart.render()
 
 // [ progress chart ] start
-colors = ['#27AE60', '#fe80b2', '#80cf00', '#06b5dd', '#ffc717', '#fd517d', '#158df7'];
+colors = ['#07a34d', '#fe80b2', '#80cf00', '#06b5dd', '#ffc717', '#fd517d', '#158df7'];
 
 function shuffleArray(array) {
   for (var i = array.length - 1; i > 0; i--) {

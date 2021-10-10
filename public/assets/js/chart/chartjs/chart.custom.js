@@ -43,7 +43,7 @@ var barData = {
     datasets: [{
         label: "My First dataset",
         fillColor: "rgba(126,  55, 216, 0.6)",
-        strokeColor: "#27AE60",
+        strokeColor: "#07a34d",
         highlightFill: "rgba(6, 181, 221, 1)",
         highlightStroke: "#06b5dd",
         data: [35, 59, 80, 81, 56, 55, 40]
@@ -73,7 +73,7 @@ var myBarChart = new Chart(barCtx).Bar(barData, barOptions);
 var polarData = [
     {
         value: 300,
-        color: "#27AE60",
+        color: "#07a34d",
         highlight: "rgba(126,  55, 216, 1)",
         label: "Yellow"
     }, {
@@ -130,8 +130,8 @@ var lineGraphData = {
     }, {
         label: "My Second dataset",
         fillColor: "rgba(126,  55, 216, 0.3)",
-        strokeColor: "#27AE60",
-        pointColor: "#27AE60",
+        strokeColor: "#07a34d",
+        pointColor: "#07a34d",
         pointStrokeColor: "#fff",
         pointHighlightFill: "#000",
         pointHighlightStroke: "rgba(30, 166, 236, 1)",
@@ -225,8 +225,8 @@ var pieOptions = {
 var doughnutData = [
     {
         value: 300,
-        color: "#27AE60",
-        highlight: "#27AE60",
+        color: "#07a34d",
+        highlight: "#07a34d",
         label: "Primary"
     },
     {
@@ -264,8 +264,8 @@ var myLineChart = {
         data: [10, 20, 40, 30, 0, 20, 10, 30, 10]
     }, {
         fillColor: "rgba(126,  55, 216, 0.2)",
-        strokeColor: "#27AE60",
-        pointColor: "#27AE60",
+        strokeColor: "#07a34d",
+        pointColor: "#07a34d",
         data: [20, 40, 10, 20, 40, 30, 40, 10, 20]
     }, {
         fillColor: "rgba(253, 81, 125, 0.2)",

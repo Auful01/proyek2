@@ -1,4 +1,4 @@
-var primary = localStorage.getItem("primary") || '#27AE60';
+var primary = localStorage.getItem("primary") || '#07a34d';
 var secondary = localStorage.getItem("secondary") || '#1ea6ec';
 
 window.pocoAdminConfig = {
