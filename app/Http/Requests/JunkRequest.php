@@ -25,7 +25,7 @@ class JunkRequest extends FormRequest
     {
         return [
             'category_junk_id' => 'required',
-            'name_junk' => 'required',
+            'junk_name' => 'required',
             'weight' => 'required',
             'price' => 'required',
         ];

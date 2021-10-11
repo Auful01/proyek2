@@ -16,6 +16,7 @@ class CreateMembershipsTable extends Migration
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
             $table->string('membership_name');
+            $table->float('price');
             $table->timestamps();
         });
     }
