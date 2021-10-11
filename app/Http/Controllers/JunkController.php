@@ -18,7 +18,7 @@ class JunkController extends Controller
     {
         $data = Junk::all();
 
-        return view('admin.junk.index', compact('data'));
+        return view('admin.category-junk.index', compact('data'));
     }
 
     /**

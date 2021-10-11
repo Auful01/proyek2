@@ -21,6 +21,7 @@
         @yield('content')
     </div>
     <!-- Container-fluid Ends-->
+    @if (Request::segment(1) == '' )
     <div class="welcome-popup modal fade" id="loadModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -38,4 +39,5 @@
         </div>
       </div>
     </div>
+    @endif
   </div>

@@ -5,7 +5,7 @@
             <!--img(src='../assets/images/menu/home.png' alt='')--><i class="pe-7s-home"></i><span>Beranda</span></a>
           <ul class="iconbar-mainmenu custom-scrollbar">
             <li class="iconbar-header">Dashboard</li>
-            <li><a href="index.html">Default</a></li>
+            <li><a href="{{url('/')}}">Default</a></li>
           </ul>
         </li>
         <li><a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-portfolio"></i><span>User</span></a>
@@ -22,7 +22,7 @@
             <li><a href="scroll-reval.html">Barang Loak</a></li>
           </ul>
         </li>
-       
+
       </ul>
     </div>
   </div>
