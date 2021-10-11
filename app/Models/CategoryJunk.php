@@ -10,6 +10,6 @@ class CategoryJunk extends Model
     use HasFactory;
 
     protected $fillable = [
-        'category'
+        'category_name'
     ];
 }

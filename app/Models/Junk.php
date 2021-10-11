@@ -15,4 +15,9 @@ class Junk extends Model
         'weight',
         'price',
     ];
+
+    public function category_junk()
+    {
+        return $this->belongsTo(Junk::class, 'category_junk_id');
+    }
 }
