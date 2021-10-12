@@ -15,11 +15,12 @@ class CreateJunksTable extends Migration
     {
         Schema::create('junks', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('category_junk_id');
+            $table->unsignedBigInteger('category_junk_id');
             $table->string('junk_name');
             $table->float('weight');
             $table->float('price');
             $table->timestamps();
+            $table->foreign('category_junk_id')->references('id')->on('category_junks');
         });
     }
 

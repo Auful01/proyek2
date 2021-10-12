@@ -15,12 +15,14 @@ class CreateMembershipUsersTable extends Migration
     {
         Schema::create('membership_users', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
-            $table->bigInteger('membership_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('membership_id');
             $table->date('activation_date');
             $table->date('due_date');
             $table->enum('status', ['Active', 'Non Active']);
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('membership_id')->references('id')->on('memberships');
         });
     }
 

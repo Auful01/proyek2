@@ -15,7 +15,7 @@ class CreateKycTable extends Migration
     {
         Schema::create('kyc', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('address');
             $table->string('place_of_birth');
             $table->date('date_of_birth');
@@ -24,6 +24,7 @@ class CreateKycTable extends Migration
             $table->enum('approval', ['Approved', 'Not Approved']);
             $table->text('message');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
