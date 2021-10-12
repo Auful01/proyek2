@@ -11,13 +11,13 @@ class Junk extends Model
 
     protected $fillable = [
         'category_junk_id',
-        'name_junk',
+        'junk_name',
         'weight',
         'price',
     ];
 
     public function category_junk()
     {
-        return $this->belongsTo(Junk::class, 'category_junk_id');
+        return $this->belongsTo(CategoryJunk::class, 'category_junk_id');
     }
 }

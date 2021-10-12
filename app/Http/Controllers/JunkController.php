@@ -16,9 +16,9 @@ class JunkController extends Controller
      */
     public function index()
     {
-        $data = Junk::all();
+        $data = Junk::with(['category_junk'])->get();
 
-        return view('admin.category-junk.index', compact('data'));
+        return view('admin.junk.index', compact('data'));
     }
 
     /**
@@ -28,7 +28,7 @@ class JunkController extends Controller
      */
     public function create()
     {
-        $category = CategoryJunk::all();
+        $category = ['' => '-- Pilih Kategori --'] + CategoryJunk::pluck('category_name', 'id')->toArray();
         return view('admin.junk.create', compact('category'));
     }
 
@@ -41,9 +41,9 @@ class JunkController extends Controller
     public function store(JunkRequest $request)
     {
         $payload = $request->all();
-        Junk::create($payload);
+        Junk::create($request->all());
 
-        return redirect('admin/junk/index')->with('status', 'Junk successfully added!');
+        return redirect('junk')->with('status', 'Junk successfully added!');
     }
 
     /**
@@ -65,8 +65,8 @@ class JunkController extends Controller
      */
     public function edit($id)
     {
-        $data = Junk::findOrFail($id);
-        $category = CategoryJunk::all();
+        $data = Junk::with(['category_junk'])->findOrFail($id);
+        $category = ['' => '-- Pilih Kategori --'] + CategoryJunk::pluck('category_name', 'id')->toArray();
         return view('admin.junk.edit', compact('data', 'category'));
     }
 
@@ -82,8 +82,8 @@ class JunkController extends Controller
         $payload = $request->all();
         $data = Junk::findOrfail($id);
 
-        $data->update($data);
-        return redirect('admin/junk/index')->with('status', 'Junk successfully changed!');
+        $data->update($payload);
+        return redirect('junk')->with('status', 'Junk successfully changed!');
     }
 
     /**
@@ -95,6 +95,6 @@ class JunkController extends Controller
     public function destroy($id)
     {
         Junk::destroy($id);
-        return redirect('admin/junk/index')->with('status', 'Junk successfully deleted!');
+        return redirect('junk')->with('status', 'Junk successfully deleted!');
     }
 }
