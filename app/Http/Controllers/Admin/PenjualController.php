@@ -17,6 +17,19 @@ class PenjualController extends Controller
     public function index()
     {
         $data = User::penjual()->get();
-        return view('dashboard.admin.Penjual.index', compact('data'));
+        return view('dashboard.admin.penjual.index', compact('data'));
+    }
+
+    public function edit($id)
+    {
+        $data = User::penjual()->find($id);
+        return view('dashboard.admin.penjual.edit', compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = User::penjual()->find($id);
+        $data->update($request->all());
+        return redirect()->route('admin.penjual');
     }
 }

@@ -30,10 +30,9 @@
                                     src="{{ asset('assets') }}/images/dashboard/user.png" alt=""></span>
                             <ul class="onhover-show-div profile-dropdown">
                                 <li class="gradient-primary">
-                                    <h5 class="f-w-600 mb-0">Elana Saint</h5><span>Web Designer</span>
+                                    <h5 class="f-w-600 mb-0">{{auth()->user()->name}}</h5>
                                 </li>
-                                <li><i data-feather="message-square"> </i>Beranda</li>
-                                <li><i data-feather="user"> </i>Profile</li>
+                                <li><i data-feather="message-square"> </i><a href="{{route('home')}}">Beranda</a> </li>
                                 <li><i data-feather="settings"> </i>
                                     <a href=""
                                         onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">

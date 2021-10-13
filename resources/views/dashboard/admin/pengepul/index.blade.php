@@ -72,6 +72,7 @@
                                 <th>Tempat, Tanggal Lahir</th>
                                 <th>No. HP</th>
                                 <th>Alamat</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,7 +80,7 @@
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>
-                                        <span class="badge badge-pill badge-success">{{$item->status}}</span>
+                                        <span class="badge badge-pill {{$item->status == 'AKTIF' ? 'badge-success' : 'badge-danger'}}">{{$item->status}}</span>
                                     </td>
                                     <td>{{ $item->nik }}</td>
                                     <td>{{ $item->name }}</td>
@@ -87,6 +88,11 @@
                                     <td>{{ $item->place_of_birth }}, {{ $item->date_of_birth }}</td>
                                     <td>{{ $item->phone }}</td>
                                     <td>{{ $item->address }}</td>
+                                    <td>
+                                        <center>
+                                            <a href="{{ route('admin.pengepul.edit', $item->id) }}" class="btn btn-warning btn-sm">Ubah</a>
+                                        </center>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

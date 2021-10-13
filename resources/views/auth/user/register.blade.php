@@ -44,12 +44,21 @@
                         </div>
                     </div>
                 @endif
+                @if (Session::has('success'))
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="alert alert-success my-3" role="alert">
+                                {{ Session::get('success') }}
+                            </div>
+                        </div>
+                    </div>
+                @endif
 
                 <form method="POST" action="{{ route('user.post.register') }}" class="login100-form validate-form pb-0">
                     @csrf
                     <div class="wrap-input100 validate-input mb-1" data-validate="nik harus diisi" data-aos="fade-up">
                         <span class="label-input100">NIK</span>
-                        <input class="input100" type="text" name="username" placeholder="Masukkan nik">
+                        <input class="input100" type="text" name="nik" placeholder="Masukkan nik">
                         <span class="focus-input100"></span>
                     </div>
                     @error('nik')
@@ -126,6 +135,34 @@
                         <span class="focus-input100"></span>
                     </div>
                     @error('password_confirmation')
+                        <small class="text-danger mb-2">{{ $message }}</small>
+                    @enderror
+
+                    <div class="wrap-input100 validate-input mb-1" data-validate="Jenis member harus diisi"
+                        data-aos="fade-up">
+                        <span class="label-input100">Jenis Member</span>
+                        <div class="row mt-3">
+                            <div class="col-6 pl-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="status" id="aktif"
+                                        value="slr">
+                                    <label class="form-check-label" for="aktif">
+                                        Penjual
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 pl-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="status" id="nonaktif"
+                                        value="pgl">
+                                    <label class="form-check-label" for="nonaktif">
+                                        Pengepul
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @error('role')
                         <small class="text-danger mb-2">{{ $message }}</small>
                     @enderror
 

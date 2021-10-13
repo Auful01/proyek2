@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Berat</label>
+                                        <label class="col-sm-3 col-form-label">Berat (kg)</label>
                                         <div class="col-sm-9">
                                             <input class="form-control" type="number" name="weight">
                                             @error('name')

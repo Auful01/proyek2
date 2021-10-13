@@ -9,6 +9,8 @@ class JunkUser extends Model
 {
     use HasFactory;
 
+    protected $table = 'junk_user';
+
     protected $fillable = [
         'user_id',
         'junk_id',
