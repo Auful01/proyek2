@@ -120,6 +120,9 @@ Route::group(['prefix'=>'pengepul','as'=>'pengepul.'], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::prefix('order')->group(function () {
             Route::get('/', [PengepulOrderController::class, 'index'])->name('order');
+            Route::get('/order-edit/{id}', [PengepulOrderController::class, 'edit'])->name('order.edit');
+            Route::post('/order-store', [PengepulOrderController::class, 'store'])->name('order.store');
+            Route::patch('/order-update/{id}', [PengepulOrderController::class, 'update'])->name('order.update');
         });
     });
 });

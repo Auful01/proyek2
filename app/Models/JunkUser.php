@@ -40,4 +40,14 @@ class JunkUser extends Model
     {
         return $this->belongsTo(Junk::class);
     }
+
+    /**
+     * Get the user associated with the JunkUser
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function order()
+    {
+        return $this->hasOne(Order::class, 'user_junk_id', 'id');
+    }
 }

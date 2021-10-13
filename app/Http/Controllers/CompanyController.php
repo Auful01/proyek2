@@ -34,7 +34,8 @@ class CompanyController extends Controller
 
     public function penjual()
     {
-        $data = JunkUser::with(['junk.junk_category', 'user'])->get();
+        $data = JunkUser::with(['junk.junk_category', 'user', 'order'])->doesnthave('order')->get();
+        
         return view('company.penjual', compact('data'));
     }
 }
