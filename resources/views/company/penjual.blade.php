@@ -52,7 +52,11 @@
                             <div class="card-footer">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p class="m-0">Harga per berat : <strong>{{$item->junk->price}}/{{$item->junk->weight}} kg</strong></p>
-                                    <a href="" class="btn btn-success">Pesan Sekarang</a>
+                                    <form action="{{ route('pengepul.order.store') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="{{ $item->junk_id }}" name="user_junk_id">
+                                        <button class="btn btn-success" type="submit">Pesan Sekarang</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
