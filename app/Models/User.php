@@ -18,11 +18,16 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
+        'nik',
         'name',
         'phone',
         'email',
-        'username',
+        'address',
+        'place_of_birth',
+        'date_of_birth',
         'password',
+        'status',
+        'role',
     ];
 
     /**
@@ -43,4 +48,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+        /**
+     * Get all of the junk_user for the Junk
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function junk_user()
+    {
+        return $this->hasMany(JunkUser::class, 'user_id', 'id');
+    }
+
+    public function scopeAdmin($query)
+    {
+        return $query->where('role', 'adm');
+    }
+
+    public function scopePenjual($query)
+    {
+        return $query->where('role', 'slr');
+    }
+
+    public function scopePengepul($query)
+    {
+        return $query->where('role', 'pgl');
+    }
 }
