@@ -19,4 +19,17 @@ class PengepulController extends Controller
         $data = User::pengepul()->get();
         return view('dashboard.admin.pengepul.index', compact('data'));
     }
+
+    public function edit($id)
+    {
+        $data = User::pengepul()->find($id);
+        return view('dashboard.admin.pengepul.edit', compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = User::pengepul()->find($id);
+        $data->update($request->all());
+        return redirect()->route('admin.pengepul');
+    }
 }

@@ -43,7 +43,9 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        User::create($request->all());
+        $payload = $request->all();
+        $payload['password'] = \Hash::make($payload['password']);
+        User::create($payload);
         return redirect()->back()->with('success', 'Register berhasil');
     }
 

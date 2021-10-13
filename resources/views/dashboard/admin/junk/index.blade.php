@@ -70,7 +70,7 @@
                                 <th style="width: 10%">No.</th>
                                 <th>Kategori</th>
                                 <th>Nama</th>
-                                <th>Berat</th>
+                                <th>Berat (kg)</th>
                                 <th>Harga</th>
                                 <th>Aksi</th>
                             </tr>

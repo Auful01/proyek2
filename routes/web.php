@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\PenjualController as AdminPenjualController;
 use App\Http\Controllers\Admin\PengepulController as AdminPengepulController;
 use App\Http\Controllers\Penjual\OrderController as PenjualOrderController;
+use App\Http\Controllers\Penjual\JunkController as PenjualJunkController;
 use App\Http\Controllers\Pengepul\OrderController as PengepulOrderController;
 
 /*
@@ -29,6 +30,15 @@ Route::get('home', [CompanyController::class, 'index'])->name('home.index');
 Route::get('about', [CompanyController::class, 'about'])->name('about');
 Route::get('contact', [CompanyController::class, 'contact'])->name('contact');
 Route::get('service', [CompanyController::class, 'service'])->name('service');
+
+Route::middleware(['auth', 'is_penjual'])->group(function () {
+    Route::get('market-pengepul', [CompanyController::class, 'pengepul'])->name('market.pengepul');
+});
+
+Route::middleware(['auth', 'is_pengepul'])->group(function () {
+    Route::get('market-penjual', [CompanyController::class, 'penjual'])->name('market.penjual');
+});
+
 Route::middleware(['guest'])->group(function () {
     Route::get('login', [AuthController::class, 'showLoginUser'])->name('user.show.login');
     Route::post('login', [AuthController::class, 'login'])->name('user.post.login');
@@ -52,9 +62,13 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function () {
         });
         Route::prefix('pengepul')->group(function () {
             Route::get('/', [AdminPengepulController::class, 'index'])->name('pengepul');
+            Route::get('/edit/{id}', [AdminPengepulController::class, 'edit'])->name('pengepul.edit');
+            Route::put('/{id}', [AdminPengepulController::class, 'update'])->name('pengepul.update');
         });
         Route::prefix('penjual')->group(function () {
             Route::get('/', [AdminPenjualController::class, 'index'])->name('penjual');
+            Route::get('/edit/{id}', [AdminPenjualController::class, 'edit'])->name('penjual.edit');
+            Route::put('/{id}', [AdminPenjualController::class, 'update'])->name('penjual.update');
         });
         Route::prefix('kategori-barang')->group(function () {
             Route::get('/', [AdminJunkCategoryController::class, 'index'])->name('kategori.barang');
@@ -84,6 +98,15 @@ Route::group(['prefix'=>'penjual','as'=>'penjual.'], function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::prefix('order')->group(function () {
             Route::get('/', [PenjualOrderController::class, 'index'])->name('order');
+        });
+        Route::prefix('barang')->group(function () {
+            Route::get('/', [PenjualJunkController::class, 'index'])->name('barang');
+            Route::post('/', [PenjualJunkController::class, 'store'])->name('barang.store');
+            Route::get('/add', [PenjualJunkController::class, 'create'])->name('barang.create');
+            Route::get('/edit/{id}', [PenjualJunkController::class, 'edit'])->name('barang.edit');
+            Route::get('/{id}', [PenjualJunkController::class, 'show'])->name('barang.show');
+            Route::put('/{id}', [PenjualJunkController::class, 'update'])->name('barang.update');
+            Route::delete('/{id}', [PenjualJunkController::class, 'destroy'])->name('barang.destroy');
         });
     });
 });

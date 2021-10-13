@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\JunkUser;
 
 class CompanyController extends Controller
 {
@@ -24,5 +25,16 @@ class CompanyController extends Controller
     public function contact()
     {
         return view('company.contact');
+    }
+
+    public function pengepul()
+    {
+        return view('company.pengepul');
+    }
+
+    public function penjual()
+    {
+        $data = JunkUser::with(['junk.junk_category', 'user'])->get();
+        return view('company.penjual', compact('data'));
     }
 }

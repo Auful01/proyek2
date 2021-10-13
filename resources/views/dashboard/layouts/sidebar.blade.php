@@ -38,6 +38,14 @@
                         </ul>
                     </li>
                     @endif
+                    @if (auth()->user()->role == 'slr')
+                    <li><a class="bar-icons" href="javascript:void(0)"><i
+                        class="pe-7s-portfolio"></i><span>Barang</span></a>
+                        <ul class="iconbar-mainmenu custom-scrollbar">
+                            <li><a href="{{route('penjual.barang')}}">Data Barang</a></li>
+                        </ul>
+                    </li>
+                    @endif
                     <li><a class="bar-icons" href="javascript:void(0)"><i
                         class="pe-7s-portfolio"></i><span>Order</span></a>
                         <ul class="iconbar-mainmenu custom-scrollbar">
@@ -47,7 +55,7 @@
                                 @elseif (auth()->user()->role == 'pgl')
                                 <a href="{{route('pengepul.order')}}">Data Order</a>
                                 @elseif (auth()->user()->role == 'slr')
-                                <a href="{{route('penjual.order')}}">Dashboard</a>
+                                <a href="{{route('penjual.order')}}">Data Order</a>
                                 @endif
                             </li>
                         </ul>

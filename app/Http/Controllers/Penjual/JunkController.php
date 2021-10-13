@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Penjual;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\JunkCategory;
+use App\Models\Junk;
+use App\Models\JunkUser;
 
 class JunkController extends Controller
 {
@@ -14,7 +17,8 @@ class JunkController extends Controller
      */
     public function index()
     {
-        //
+        $data = JunkUser::with(['user', 'junk.junk_category'])->get();
+        return view('dashboard.penjual.junk.index', compact('data'));
     }
 
     /**
@@ -24,7 +28,9 @@ class JunkController extends Controller
      */
     public function create()
     {
-        //
+        $category = JunkCategory::active()->get();
+        $junk = Junk::get();
+        return view('dashboard.penjual.junk.create', compact('category', 'junk'));
     }
 
     /**
@@ -35,7 +41,10 @@ class JunkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $payload = $request->all();
+        $payload['user_id'] = auth()->user()->id;
+        $data = JunkUser::create($payload);
+        return redirect()->route('penjual.barang');
     }
 
     /**
@@ -46,7 +55,8 @@ class JunkController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = JunkUser::with(['user', 'junk.junk_category'])->find($id);
+        return view('dashboard.penjual.junk.show', compact('data'));
     }
 
     /**
@@ -57,7 +67,10 @@ class JunkController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = JunkCategory::active()->get();
+        $junk = Junk::get();
+        $data = JunkUser::with(['user', 'junk.junk_category'])->find($id);
+        return view('dashboard.penjual.junk.edit', compact('data', 'category', 'junk'));
     }
 
     /**
@@ -69,7 +82,9 @@ class JunkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = JunkUser::find($id);
+        $data->update($request->all());
+        return redirect()->route('penjual.barang');
     }
 
     /**
@@ -80,6 +95,8 @@ class JunkController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = JunkUser::find($id);
+        $data->delete();
+        return redirect()->route('penjual.barang');
     }
 }
