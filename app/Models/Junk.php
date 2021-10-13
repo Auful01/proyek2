@@ -10,14 +10,30 @@ class Junk extends Model
     use HasFactory;
 
     protected $fillable = [
-        'category_junk_id',
-        'junk_name',
+        'name',
+        'junk_category_id',
         'weight',
         'price',
     ];
 
-    public function category_junk()
+    /**
+     * Get the junk_category that owns the Junk
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function junk_category()
     {
-        return $this->belongsTo(CategoryJunk::class, 'category_junk_id');
+        return $this->belongsTo(JunkCategory::class);
     }
+
+    /**
+     * Get all of the junk_user for the Junk
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function junk_user()
+    {
+        return $this->hasMany(JunkUser::class, 'junk_id', 'id');
+    }
+
 }
