@@ -144,7 +144,7 @@
                         <div class="row mt-3">
                             <div class="col-6 pl-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" id="aktif"
+                                    <input class="form-check-input" type="radio" name="role" id="aktif"
                                         value="slr">
                                     <label class="form-check-label" for="aktif">
                                         Penjual
@@ -153,7 +153,7 @@
                             </div>
                             <div class="col-6 pl-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" id="nonaktif"
+                                    <input class="form-check-input" type="radio" name="role" id="nonaktif"
                                         value="pgl">
                                     <label class="form-check-label" for="nonaktif">
                                         Pengepul

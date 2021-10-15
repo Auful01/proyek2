@@ -17,7 +17,7 @@ class JunkController extends Controller
      */
     public function index()
     {
-        $data = JunkUser::with(['user', 'junk.junk_category'])->get();
+        $data = JunkUser::with(['user', 'junk.junk_category'])->where('user_id', auth()->user()->id)->get();
         return view('dashboard.penjual.junk.index', compact('data'));
     }
 

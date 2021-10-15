@@ -29,13 +29,16 @@ class AuthController extends Controller
     {
         if(auth()->attempt(array('email' => $request->email, 'password' => $request->password)))
         {
-            if (auth()->user()->role == 'adm') {
-                return redirect()->route('admin.dashboard');
-            }else if(auth()->user()->role == 'pgl'){
-                return redirect()->route('pengepul.dashboard');
-            } else if(auth()->user()->role == 'slr'){
-                return redirect()->route('penjual.dashboard');
-            }
+            // if(auth()->user()->status = 'NONAKTIF'){
+            //     return redirect()->back()->with('error','Akun anda sedang di verifikasi oleh admin, Dimohon menunggu.');
+            // }else{
+                if (auth()->user()->role == 'adm') {
+                    return redirect()->route('admin.dashboard');
+                }else if(auth()->user()->role == 'pgl'){
+                    return redirect()->route('pengepul.dashboard');
+                } else if(auth()->user()->role == 'slr'){
+                    return redirect()->route('penjual.dashboard');
+                }
         }else{
             return redirect()->back()->with('error','Email atau password salah.');
         }
